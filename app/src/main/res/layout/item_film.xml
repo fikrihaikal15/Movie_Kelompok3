@@ -10,10 +10,10 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_margin="20dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="4dp"
-        app:contentPadding="20dp">
+        app:cardBackgroundColor="@color/material_dynamic_secondary40">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -21,34 +21,40 @@
 
             <ImageView
                 android:id="@+id/imgFilm"
-                android:layout_width="250dp"
+                android:layout_width="match_parent"
                 android:layout_height="250dp"
                 android:imageResource = "@{film.img}"
-                android:layout_gravity="center"
+                android:scaleType="centerCrop"
 
                 />
             <TextView
                 android:id="@+id/tvNamaFilm"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{film.namaFilm}"
                 android:textSize="20sp"
-                android:textColor="@color/black"/>
+                android:textColor="@color/white"/>
             <TextView
                 android:layout_marginTop="8dp"
+                android:layout_marginStart="15dp"
                 android:id="@+id/tvReleaseFilm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{@string/release + film.tglRelease}"
                 android:textSize="14sp"
+                android:textColor="@color/white"
                 />
             <TextView
                 android:id="@+id/tvRating"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{@string/rating + film.rating}"
                 android:textSize="14sp"
+                android:textColor="@color/white"
                 />
         </LinearLayout>
 
