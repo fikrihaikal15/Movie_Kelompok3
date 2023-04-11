@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.movie_kelompok3.Fragment.LoginFragment"
+        android:name="com.example.movie_kelompok3.fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.movie_kelompok3.Fragment.HomeFragment"
+        android:name="com.example.movie_kelompok3.fragment.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.movie_kelompok3.Fragment.ProfileFragment"
+        android:name="com.example.movie_kelompok3.fragment.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailFilmFragment"
-        android:name="com.example.movie_kelompok3.Fragment.DetailFilmFragment"
+        android:name="com.example.movie_kelompok3.fragment.DetailFilmFragment"
         android:label="fragment_detail_film"
         tools:layout="@layout/fragment_detail_film" />
 </navigation>

@@ -1,4 +1,4 @@
-package com.example.movie_kelompok3.Fragment
+package com.example.movie_kelompok3.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -20,7 +20,10 @@ class LoginFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentLoginBinding.inflate(layoutInflater, container, false)
+
+        binding.clickLogin = this
         return binding.root
+
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -29,9 +32,6 @@ class LoginFragment : Fragment() {
         listAccount["account1"] = "password1"
         listAccount["account2"] = "password2"
 
-        binding.btnSignIn.setOnClickListener {
-            checkAccount()
-        }
 
     }
 
@@ -47,14 +47,15 @@ class LoginFragment : Fragment() {
                     }
                     accountFailed = false
                     findNavController().navigate(R.id.action_loginFragment_to_homeFragment, bundleData)
+                    Toast.makeText(context, "login berhasil", Toast.LENGTH_SHORT).show()
                     break
                 }
             }
             if(accountFailed){
-                Toast.makeText(context, "username & password yang anda masukan salah!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(context, "username & password yang anda masukan salah!!", Toast.LENGTH_SHORT).show()
             }
         }else{
-            Toast.makeText(context, "username & password tidak boleh kosong!", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "username & password tidak boleh kosong!!", Toast.LENGTH_SHORT).show()
         }
     }
 }
