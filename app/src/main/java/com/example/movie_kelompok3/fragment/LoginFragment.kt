@@ -31,6 +31,7 @@ class LoginFragment : Fragment() {
 
         listAccount["account1"] = "password1"
         listAccount["account2"] = "password2"
+        listAccount["depa"] = "ganteng"
 
 
     }
