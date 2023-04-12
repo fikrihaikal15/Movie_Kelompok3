@@ -26,12 +26,12 @@ class FilmAdapter (var listFilm : ArrayList<DataFilm>) : RecyclerView.Adapter<Fi
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FilmAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = ItemFilmBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: FilmAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bindFilm(listFilm[position])
     }
 
@@ -41,6 +41,6 @@ class FilmAdapter (var listFilm : ArrayList<DataFilm>) : RecyclerView.Adapter<Fi
 
     fun setFilmList(listFilm: ArrayList<DataFilm>){
         this.listFilm = listFilm
-        notifyDataSetChanged()
+//        notifyDataSetChanged()
     }
 }
